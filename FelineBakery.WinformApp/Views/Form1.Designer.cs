@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             pictureBox1 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
@@ -35,6 +36,9 @@
             textBoxTotalBread = new TextBox();
             textBoxBreadPerClick = new TextBox();
             textBoxBreadPerSecond = new TextBox();
+            gameTimer = new System.Windows.Forms.Timer(components);
+            textBoxTimer = new TextBox();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -99,11 +103,35 @@
             textBoxBreadPerSecond.Size = new Size(100, 23);
             textBoxBreadPerSecond.TabIndex = 6;
             // 
+            // gameTimer
+            // 
+            gameTimer.Enabled = true;
+            gameTimer.Interval = 1000;
+            gameTimer.Tick += gameTimer_Tick_1;
+            // 
+            // textBoxTimer
+            // 
+            textBoxTimer.Location = new Point(135, 225);
+            textBoxTimer.Name = "textBoxTimer";
+            textBoxTimer.Size = new Size(100, 23);
+            textBoxTimer.TabIndex = 7;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(24, 228);
+            label4.Name = "label4";
+            label4.Size = new Size(74, 15);
+            label4.TabIndex = 8;
+            label4.Text = "Elapsed time";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(333, 450);
+            Controls.Add(label4);
+            Controls.Add(textBoxTimer);
             Controls.Add(textBoxBreadPerSecond);
             Controls.Add(textBoxBreadPerClick);
             Controls.Add(textBoxTotalBread);
@@ -127,5 +155,8 @@
         private TextBox textBoxTotalBread;
         private TextBox textBoxBreadPerClick;
         private TextBox textBoxBreadPerSecond;
+        private System.Windows.Forms.Timer gameTimer;
+        private TextBox textBoxTimer;
+        private Label label4;
     }
 }

@@ -8,7 +8,7 @@
         public Cats()
         {
             CatQuanity = 0;
-            BreadPerSecond = 1;
+            BreadPerSecond = 0;
         }
     }
 }

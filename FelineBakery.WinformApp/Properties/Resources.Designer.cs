@@ -63,6 +63,16 @@ namespace FelineBakery.WinformApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _445412913_875087544652048_801590817760410871_n {
+            get {
+                object obj = ResourceManager.GetObject("445412913_875087544652048_801590817760410871_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Bread_PNG_Clip_Art_2218 {
             get {
                 object obj = ResourceManager.GetObject("Bread_PNG_Clip_Art-2218", resourceCulture);

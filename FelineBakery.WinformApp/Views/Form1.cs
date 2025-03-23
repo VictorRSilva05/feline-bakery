@@ -1,5 +1,6 @@
 
 using FelineBakery.WinformApp.Models;
+using FelineBakery.WinformApp.Views;
 using System.Diagnostics;
 
 namespace FelineBakery.WinformApp
@@ -9,15 +10,19 @@ namespace FelineBakery.WinformApp
         Bread Bread = new Bread();
         Cats Cats = new Cats();
         Stopwatch stopwatch = new Stopwatch();
+        private StreetForm streetForm;
+        private ShopForm shopForm;
+        private KitchenForm kitchenForm;
         public Form1()
         {
             InitializeComponent();
+            stopwatch.Start(); // Start the stopwatch
+            //For some God know why reason it only works when I put it here
         }
-               
+
         private void Form1_Load(object sender, EventArgs e)
         {
             gameTimer.Start(); // Initialize the timer 
-            stopwatch.Start(); // Start the stopwatch
         }
         private void gameTimer_Tick_1(object sender, EventArgs e)//Every 1000ms this event will trigger
         {
@@ -48,5 +53,43 @@ namespace FelineBakery.WinformApp
 
         }
 
+        private void buttonStreets_Click(object sender, EventArgs e)
+        {
+            if (streetForm == null || streetForm.IsDisposed) // Check if the form is already open
+            {
+                streetForm = new StreetForm();
+                streetForm.Show();
+            }
+            else
+            {
+                streetForm.BringToFront(); // Bring the existing form to the front
+            }
+        }
+
+        private void buttonShop_Click(object sender, EventArgs e)
+        {
+            if (shopForm == null || shopForm.IsDisposed)
+            {
+                shopForm = new ShopForm();
+                shopForm.Show();
+            }
+            else
+            {
+                shopForm.BringToFront();
+            }
+        }
+
+        private void buttonKitchen_Click(object sender, EventArgs e)
+        {
+            if (kitchenForm == null || kitchenForm.IsDisposed)
+            {
+                kitchenForm = new KitchenForm();
+                kitchenForm.Show();
+            }
+            else
+            {
+                kitchenForm.BringToFront();
+            }
+        }
     }
 }

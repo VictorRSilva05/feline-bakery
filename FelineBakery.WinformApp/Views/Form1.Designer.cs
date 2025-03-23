@@ -39,6 +39,8 @@
             gameTimer = new System.Windows.Forms.Timer(components);
             textBoxTimer = new TextBox();
             label4 = new Label();
+            label5 = new Label();
+            textBoxCatsAdopted = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -106,7 +108,6 @@
             // gameTimer
             // 
             gameTimer.Enabled = true;
-            gameTimer.Interval = 1000;
             gameTimer.Tick += gameTimer_Tick_1;
             // 
             // textBoxTimer
@@ -125,11 +126,29 @@
             label4.TabIndex = 8;
             label4.Text = "Elapsed time";
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(24, 347);
+            label5.Name = "label5";
+            label5.Size = new Size(77, 15);
+            label5.TabIndex = 9;
+            label5.Text = "Cats adopted";
+            // 
+            // textBoxCatsAdopted
+            // 
+            textBoxCatsAdopted.Location = new Point(135, 347);
+            textBoxCatsAdopted.Name = "textBoxCatsAdopted";
+            textBoxCatsAdopted.Size = new Size(100, 23);
+            textBoxCatsAdopted.TabIndex = 10;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(333, 450);
+            Controls.Add(textBoxCatsAdopted);
+            Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(textBoxTimer);
             Controls.Add(textBoxBreadPerSecond);
@@ -158,5 +177,7 @@
         private System.Windows.Forms.Timer gameTimer;
         private TextBox textBoxTimer;
         private Label label4;
+        private Label label5;
+        private TextBox textBoxCatsAdopted;
     }
 }

@@ -22,8 +22,10 @@ namespace FelineBakery.WinformApp
         private void gameTimer_Tick_1(object sender, EventArgs e)//Every 1000ms this event will trigger
         {
             UpdateTimer();
-            textBoxTotalBread.Text = Bread.BreadQuantity.ToString();
-            textBoxBreadPerClick.Text = Bread.BreadPerClick.ToString();
+            textBoxTotalBread.Text = Bread.BreadQuantity.ToString("F0");
+            textBoxBreadPerClick.Text = Bread.BreadPerClick.ToString("F2");
+            textBoxCatsAdopted.Text = Cats.CatQuanity.ToString();
+            textBoxBreadPerSecond.Text = Cats.BreadPerSecond.ToString("F2");
             Bread.BreadQuantity += Cats.BreadPerSecond; // Bread per second
         }
 

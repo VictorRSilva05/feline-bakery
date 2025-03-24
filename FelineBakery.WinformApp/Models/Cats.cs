@@ -13,15 +13,6 @@
             BreadPerSecond = 0.0f;
             AdoptionFee = 25;
         }
-        public void BuyCat()
-        {
-            if (Bread.BreadQuantity >= AdoptionFee)
-            {
-                CatQuanity++;
-                Bread.BreadQuantity -= AdoptionFee;
-                BreadPerSecond += 0.1f;
-                AdoptionFee += (25 * CatQuanity);
-            }
-        }
+        
     }
 }

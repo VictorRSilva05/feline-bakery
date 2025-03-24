@@ -97,6 +97,7 @@
             buttonAdopt.TabIndex = 12;
             buttonAdopt.Text = "Adopt";
             buttonAdopt.UseVisualStyleBackColor = true;
+            buttonAdopt.Click += buttonAdopt_Click;
             // 
             // labelPrice
             // 

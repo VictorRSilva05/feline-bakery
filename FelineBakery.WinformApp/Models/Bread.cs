@@ -6,10 +6,15 @@ using System.Threading.Tasks;
 
 namespace FelineBakery.WinformApp.Models
 {
-    internal class Bread
+    public class Bread
     {
         public float BreadQuantity { get; set; }
         public float BreadPerClick { get; set; }
+
+        public Bread(float breadQuantity)
+        {
+            BreadQuantity = breadQuantity;
+        }
 
         public Bread()
         {

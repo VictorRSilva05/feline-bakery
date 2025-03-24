@@ -7,8 +7,8 @@ namespace FelineBakery.WinformApp
 {
     public partial class Form1 : Form
     {
-        Bread Bread = new Bread();
-        Cats Cats = new Cats();
+        Bread Bread1 = new Bread();
+        Cats Cat1 = new Cats();
         Stopwatch stopwatch = new Stopwatch();
         private StreetForm streetForm;
         private ShopForm shopForm;
@@ -25,13 +25,13 @@ namespace FelineBakery.WinformApp
             gameTimer.Start(); // Initialize the timer 
         }
         private void gameTimer_Tick_1(object sender, EventArgs e)//Every 1000ms this event will trigger
-        {
+        {   
             UpdateTimer();
-            textBoxTotalBread.Text = Bread.BreadQuantity.ToString("F0");
-            textBoxBreadPerClick.Text = Bread.BreadPerClick.ToString("F2");
-            textBoxCatsAdopted.Text = Cats.CatQuanity.ToString();
-            textBoxBreadPerSecond.Text = Cats.BreadPerSecond.ToString("F2");
-            Bread.BreadQuantity += Cats.BreadPerSecond; // Bread per second
+            textBoxTotalBread.Text = Bread1.BreadQuantity.ToString("F0");
+            textBoxBreadPerClick.Text = Bread1.BreadPerClick.ToString("F2");
+            textBoxCatsAdopted.Text = Cat1.CatQuanity.ToString();
+            textBoxBreadPerSecond.Text = Cat1.BreadPerSecond.ToString("F2");
+            Bread1.BreadQuantity += Cat1.BreadPerSecond; // Bread per second
         }
 
         private void UpdateTimer()
@@ -40,7 +40,7 @@ namespace FelineBakery.WinformApp
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Bread.BreadQuantity++;//Bread per click
+            Bread1.BreadQuantity++;//Bread per click
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -55,17 +55,16 @@ namespace FelineBakery.WinformApp
 
         private void buttonStreets_Click(object sender, EventArgs e)
         {
-            if (streetForm == null || streetForm.IsDisposed) // Check if the form is already open
+            if (streetForm == null || streetForm.IsDisposed)
             {
-                streetForm = new StreetForm();
+                streetForm = new StreetForm(Bread1, Cat1); // Passa as referências
                 streetForm.Show();
             }
             else
             {
-                streetForm.BringToFront(); // Bring the existing form to the front
+                streetForm.BringToFront();
             }
         }
-
         private void buttonShop_Click(object sender, EventArgs e)
         {
             if (shopForm == null || shopForm.IsDisposed)
@@ -91,5 +90,8 @@ namespace FelineBakery.WinformApp
                 kitchenForm.BringToFront();
             }
         }
+
+        
+
     }
 }

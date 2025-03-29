@@ -66,7 +66,6 @@
             label1.Size = new Size(66, 15);
             label1.TabIndex = 1;
             label1.Text = "Total bread";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -85,7 +84,6 @@
             label3.Size = new Size(98, 15);
             label3.TabIndex = 3;
             label3.Text = "Bread per second";
-            label3.Click += label3_Click;
             // 
             // textBoxTotalBread
             // 

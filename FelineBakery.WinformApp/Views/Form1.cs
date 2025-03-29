@@ -43,21 +43,11 @@ namespace FelineBakery.WinformApp
             Bread1.BreadQuantity++;//Bread per click
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonStreets_Click(object sender, EventArgs e)
         {
             if (streetForm == null || streetForm.IsDisposed)
             {
-                streetForm = new StreetForm(Bread1, Cat1); // Passa as referências
+                streetForm = new StreetForm(Bread1, Cat1); // Need to pass the references of Bread and Cat to the StreetForm
                 streetForm.Show();
             }
             else
@@ -89,9 +79,6 @@ namespace FelineBakery.WinformApp
             {
                 kitchenForm.BringToFront();
             }
-        }
-
-        
-
+        }     
     }
 }

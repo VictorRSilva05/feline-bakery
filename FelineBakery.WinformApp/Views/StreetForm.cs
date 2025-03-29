@@ -7,12 +7,6 @@ namespace FelineBakery.WinformApp.Views
         Bread Bread = new Bread();
         Cats Cats = new Cats();
         Form1 form1 = new Form1();  
-        public StreetForm()
-        {
-            InitializeComponent();
-            UpdateForm();
-        }
-
         public StreetForm(Bread bread, Cats cats)
         {
             InitializeComponent();

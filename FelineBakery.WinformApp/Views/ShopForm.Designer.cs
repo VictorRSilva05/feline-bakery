@@ -52,12 +52,12 @@
             label11 = new Label();
             label12 = new Label();
             tableLayoutPanel3 = new TableLayoutPanel();
-            button11 = new Button();
-            button10 = new Button();
+            buttonSteroids = new Button();
+            buttonRiceBucket = new Button();
             label13 = new Label();
             label14 = new Label();
             label15 = new Label();
-            button9 = new Button();
+            buttonForearm = new Button();
             toolTip1 = new ToolTip(components);
             label16 = new Label();
             tableLayoutPanel1.SuspendLayout();
@@ -307,12 +307,12 @@
             tableLayoutPanel3.ColumnCount = 2;
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel3.Controls.Add(button11, 1, 2);
-            tableLayoutPanel3.Controls.Add(button10, 1, 1);
+            tableLayoutPanel3.Controls.Add(buttonSteroids, 1, 2);
+            tableLayoutPanel3.Controls.Add(buttonRiceBucket, 1, 1);
             tableLayoutPanel3.Controls.Add(label13, 0, 0);
             tableLayoutPanel3.Controls.Add(label14, 0, 1);
             tableLayoutPanel3.Controls.Add(label15, 0, 2);
-            tableLayoutPanel3.Controls.Add(button9, 1, 0);
+            tableLayoutPanel3.Controls.Add(buttonForearm, 1, 0);
             tableLayoutPanel3.Location = new Point(287, 96);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 3;
@@ -322,23 +322,25 @@
             tableLayoutPanel3.Size = new Size(200, 102);
             tableLayoutPanel3.TabIndex = 11;
             // 
-            // button11
+            // buttonSteroids
             // 
-            button11.Location = new Point(103, 73);
-            button11.Name = "button11";
-            button11.Size = new Size(75, 23);
-            button11.TabIndex = 5;
-            button11.Text = "Buy";
-            button11.UseVisualStyleBackColor = true;
+            buttonSteroids.Location = new Point(103, 73);
+            buttonSteroids.Name = "buttonSteroids";
+            buttonSteroids.Size = new Size(75, 23);
+            buttonSteroids.TabIndex = 5;
+            buttonSteroids.Text = "Buy";
+            buttonSteroids.UseVisualStyleBackColor = true;
+            buttonSteroids.Click += buttonSteroids_Click;
             // 
-            // button10
+            // buttonRiceBucket
             // 
-            button10.Location = new Point(103, 39);
-            button10.Name = "button10";
-            button10.Size = new Size(75, 23);
-            button10.TabIndex = 4;
-            button10.Text = "Buy";
-            button10.UseVisualStyleBackColor = true;
+            buttonRiceBucket.Location = new Point(103, 39);
+            buttonRiceBucket.Name = "buttonRiceBucket";
+            buttonRiceBucket.Size = new Size(75, 23);
+            buttonRiceBucket.TabIndex = 4;
+            buttonRiceBucket.Text = "Buy";
+            buttonRiceBucket.UseVisualStyleBackColor = true;
+            buttonRiceBucket.Click += buttonRiceBucket_Click;
             // 
             // label13
             // 
@@ -370,14 +372,15 @@
             label15.Text = "Steroids";
             label15.MouseHover += label15_MouseHover;
             // 
-            // button9
+            // buttonForearm
             // 
-            button9.Location = new Point(103, 3);
-            button9.Name = "button9";
-            button9.Size = new Size(75, 23);
-            button9.TabIndex = 3;
-            button9.Text = "Buy";
-            button9.UseVisualStyleBackColor = true;
+            buttonForearm.Location = new Point(103, 3);
+            buttonForearm.Name = "buttonForearm";
+            buttonForearm.Size = new Size(75, 23);
+            buttonForearm.TabIndex = 3;
+            buttonForearm.Text = "Buy";
+            buttonForearm.UseVisualStyleBackColor = true;
+            buttonForearm.Click += buttonForearm_Click;
             // 
             // label16
             // 
@@ -441,9 +444,9 @@
         private Label label13;
         private Label label14;
         private Label label15;
-        private Button button11;
-        private Button button10;
-        private Button button9;
+        private Button buttonSteroids;
+        private Button buttonRiceBucket;
+        private Button buttonForearm;
         private ToolTip toolTip1;
         private Label label16;
     }

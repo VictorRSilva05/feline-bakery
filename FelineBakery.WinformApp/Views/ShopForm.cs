@@ -61,19 +61,19 @@ namespace FelineBakery.WinformApp.Views
         private void label13_MouseHover(object sender, EventArgs e)
         {
             toolTip1.Show("You start going to the gym to help you knead the dough faster" +
-                "\nBread per second: Price:", label13);
+                "\nBread per click:+3 Price:30", label13);
         }
 
         private void label14_MouseHover(object sender, EventArgs e)
         {
             toolTip1.Show("Besides the gym, you also train your forearms with a rice bucket" +
-                "\nBread per second: Price:", label14);
+                "\nBread per click:+4 Price:500", label14);
         }
 
         private void label15_MouseHover(object sender, EventArgs e)
         {
             toolTip1.Show("You don't care about the side effects, you need to knead faster!" +
-                "\nBread per second: Price:", label15);
+                "\nBread per click:+6 Price:1500", label15);
         }
 
         private void buttonBoxes_Click(object sender, EventArgs e)
@@ -97,7 +97,7 @@ namespace FelineBakery.WinformApp.Views
             {
                 cats1.BreadPerSecond += 0.07f;
                 bread1.BreadQuantity -= 125;
-                buttonBoxes.Enabled = false;
+                buttonWetFood.Enabled = false;
                 MessageBox.Show("You bought some wet food for the cats, they love it!");
             }
             else
@@ -144,6 +144,51 @@ namespace FelineBakery.WinformApp.Views
                 bread1.BreadQuantity -= 1200;
                 buttonRunningWater.Enabled = false;
                 MessageBox.Show("You bought a running water fountain for the cats, they love it!");
+            }
+            else
+            {
+                MessageBox.Show("You don't have enough bread to buy this item!");
+            }
+        }
+
+        private void buttonForearm_Click(object sender, EventArgs e)
+        {
+            if (bread1.BreadQuantity >= 30)
+            {
+                bread1.BreadPerClick += 3;
+                bread1.BreadQuantity -= 30;
+                buttonForearm.Enabled = false;
+                MessageBox.Show("You start going to the gym to help you knead the dough faster");
+            }
+            else
+            {
+                MessageBox.Show("You don't have enough bread to buy this item!");
+            }
+        }
+
+        private void buttonRiceBucket_Click(object sender, EventArgs e)
+        {
+            if (bread1.BreadQuantity >= 500)
+            {
+                bread1.BreadPerClick += 4;
+                bread1.BreadQuantity -= 500;
+                buttonRiceBucket.Enabled = false;
+                MessageBox.Show("Besides the gym, you also train your forearms with a rice bucket");
+            }
+            else
+            {
+                MessageBox.Show("You don't have enough bread to buy this item!");
+            }
+        }
+
+        private void buttonSteroids_Click(object sender, EventArgs e)
+        {
+            if(bread1.BreadQuantity >= 1500)
+            {
+                bread1.BreadPerClick += 6;
+                bread1.BreadQuantity -= 1500;
+                buttonSteroids.Enabled = false;
+                MessageBox.Show("You don't care about the side effects, you need to knead faster!");
             }
             else
             {

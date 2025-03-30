@@ -39,11 +39,11 @@
             label8 = new Label();
             label9 = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
-            button5 = new Button();
-            button4 = new Button();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            buttonRunningWater = new Button();
+            buttonCatnip = new Button();
+            buttonWindows = new Button();
+            buttonWetFood = new Button();
+            buttonBoxes = new Button();
             tableLayoutPanel2 = new TableLayoutPanel();
             button8 = new Button();
             button7 = new Button();
@@ -156,13 +156,13 @@
             tableLayoutPanel1.ColumnCount = 2;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 52.5F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 47.5F));
-            tableLayoutPanel1.Controls.Add(button5, 1, 4);
-            tableLayoutPanel1.Controls.Add(button4, 1, 3);
-            tableLayoutPanel1.Controls.Add(button3, 1, 2);
-            tableLayoutPanel1.Controls.Add(button2, 1, 1);
+            tableLayoutPanel1.Controls.Add(buttonRunningWater, 1, 4);
+            tableLayoutPanel1.Controls.Add(buttonCatnip, 1, 3);
+            tableLayoutPanel1.Controls.Add(buttonWindows, 1, 2);
+            tableLayoutPanel1.Controls.Add(buttonWetFood, 1, 1);
             tableLayoutPanel1.Controls.Add(label9, 0, 3);
             tableLayoutPanel1.Controls.Add(label8, 0, 4);
-            tableLayoutPanel1.Controls.Add(button1, 1, 0);
+            tableLayoutPanel1.Controls.Add(buttonBoxes, 1, 0);
             tableLayoutPanel1.Controls.Add(label5, 0, 0);
             tableLayoutPanel1.Controls.Add(label6, 0, 1);
             tableLayoutPanel1.Controls.Add(label7, 0, 2);
@@ -178,50 +178,55 @@
             tableLayoutPanel1.TabIndex = 9;
             tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 
-            // button5
+            // buttonRunningWater
             // 
-            button5.Location = new Point(108, 117);
-            button5.Name = "button5";
-            button5.Size = new Size(75, 22);
-            button5.TabIndex = 12;
-            button5.Text = "Buy";
-            button5.UseVisualStyleBackColor = true;
+            buttonRunningWater.Location = new Point(108, 117);
+            buttonRunningWater.Name = "buttonRunningWater";
+            buttonRunningWater.Size = new Size(75, 22);
+            buttonRunningWater.TabIndex = 12;
+            buttonRunningWater.Text = "Buy";
+            buttonRunningWater.UseVisualStyleBackColor = true;
+            buttonRunningWater.Click += buttonRunningWater_Click;
             // 
-            // button4
+            // buttonCatnip
             // 
-            button4.Location = new Point(108, 89);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 22);
-            button4.TabIndex = 12;
-            button4.Text = "Buy";
-            button4.UseVisualStyleBackColor = true;
+            buttonCatnip.Location = new Point(108, 89);
+            buttonCatnip.Name = "buttonCatnip";
+            buttonCatnip.Size = new Size(75, 22);
+            buttonCatnip.TabIndex = 12;
+            buttonCatnip.Text = "Buy";
+            buttonCatnip.UseVisualStyleBackColor = true;
+            buttonCatnip.Click += buttonCatnip_Click;
             // 
-            // button3
+            // buttonWindows
             // 
-            button3.Location = new Point(108, 61);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 22);
-            button3.TabIndex = 12;
-            button3.Text = "Buy";
-            button3.UseVisualStyleBackColor = true;
+            buttonWindows.Location = new Point(108, 61);
+            buttonWindows.Name = "buttonWindows";
+            buttonWindows.Size = new Size(75, 22);
+            buttonWindows.TabIndex = 12;
+            buttonWindows.Text = "Buy";
+            buttonWindows.UseVisualStyleBackColor = true;
+            buttonWindows.Click += buttonWindows_Click;
             // 
-            // button2
+            // buttonWetFood
             // 
-            button2.Location = new Point(108, 32);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 22);
-            button2.TabIndex = 10;
-            button2.Text = "Buy";
-            button2.UseVisualStyleBackColor = true;
+            buttonWetFood.Location = new Point(108, 32);
+            buttonWetFood.Name = "buttonWetFood";
+            buttonWetFood.Size = new Size(75, 22);
+            buttonWetFood.TabIndex = 10;
+            buttonWetFood.Text = "Buy";
+            buttonWetFood.UseVisualStyleBackColor = true;
+            buttonWetFood.Click += buttonWetFood_Click;
             // 
-            // button1
+            // buttonBoxes
             // 
-            button1.Location = new Point(108, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 9;
-            button1.Text = "Buy";
-            button1.UseVisualStyleBackColor = true;
+            buttonBoxes.Location = new Point(108, 3);
+            buttonBoxes.Name = "buttonBoxes";
+            buttonBoxes.Size = new Size(75, 23);
+            buttonBoxes.TabIndex = 9;
+            buttonBoxes.Text = "Buy";
+            buttonBoxes.UseVisualStyleBackColor = true;
+            buttonBoxes.Click += buttonBoxes_Click;
             // 
             // tableLayoutPanel2
             // 
@@ -422,11 +427,11 @@
         private TableLayoutPanel tableLayoutPanel1;
         private TableLayoutPanel tableLayoutPanel2;
         private TableLayoutPanel tableLayoutPanel3;
-        private Button button5;
-        private Button button4;
-        private Button button3;
-        private Button button2;
-        private Button button1;
+        private Button buttonRunningWater;
+        private Button buttonCatnip;
+        private Button buttonWindows;
+        private Button buttonWetFood;
+        private Button buttonBoxes;
         private Button button8;
         private Button button7;
         private Button button6;

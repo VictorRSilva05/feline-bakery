@@ -59,7 +59,7 @@ namespace FelineBakery.WinformApp
         {
             if (shopForm == null || shopForm.IsDisposed)
             {
-                shopForm = new ShopForm();
+                shopForm = new ShopForm(Bread1, Cat1);
                 shopForm.Show();
             }
             else
